@@ -1,10 +1,8 @@
 class HomeController < ApplicationController
   def index
+    
   end
-  def second
-  end
-  def third
-  end
+
   def adding
     
   end
@@ -12,6 +10,9 @@ class HomeController < ApplicationController
     
   end
   def position
+    
+  end
+  def fade
     
   end
 end
