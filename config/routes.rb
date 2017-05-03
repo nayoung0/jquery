@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'home/index'
   get 'home/adding'
   get 'home/events'
   get 'home/position'

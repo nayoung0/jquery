@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>JavaScript &amp; jQuery - 새로운 콘텐츠 추가하기</title>
-    <link rel="stylesheet" href="assets/c07.scss" />
+    <!--<link rel="stylesheet" href="assets/c07.scss" />-->
     <meta charset="utf-8">
   </head>
   <body>
@@ -16,7 +16,13 @@
         <li id="four">발사믹 식초</li>
       </ul>
     </div>
-    <script src="js/jquery-1.11.0.js"></script>
-    <script src="js/adding-new-content.js"></script>
+    <script>
+      $(function() {
+        $('ul').before('<p class="notice">변경됨</p>');
+        $('li.hot').prepend('+ ');
+        var $newListItem = $('<li><em>무방부제</em> 간장</li>');
+        $('li:last').after($newListItem);
+      });
+    </script>
   </body>
 </html>

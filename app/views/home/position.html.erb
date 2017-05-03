@@ -26,7 +26,7 @@
         <li>녹차</li>
         <li>토마토</li>
         <li>바나나</li>
-        <li>강남콩</li>
+        <li>강낭콩</li>
         <li>상추</li>
         <li>유기농 현미 식초</li>
         <li>초밥 김</li>
@@ -51,10 +51,26 @@
         <li><em>무방부제</em> 간장</li>
         <li>퀴노아</li>
       </ul>
-      <p id="footer">&copy; ListKing</p>
-      <div id="slideAd">ListKing Pro가 단돈 $1.99!</div>
+      <p id="footer">&copy; SookmyungLion</p>
+      <div id="slideAd">SookmyungLion Pro가 단돈 $9999.99!</div>
     </div>
-    <script src="js/jquery-1.11.0.js"></script>
-    <script src="js/position.js"></script>
+    <script>
+      $(function() {
+        var $window = $(window);
+        var $slideAd = $('#slideAd');
+        var endZone = $('#footer').offset().top - $window.height() - 500;
+      
+        $window.on('scroll', function(){
+      
+          if  ( (endZone) < $window.scrollTop() ) {
+            $slideAd.animate({ 'right': '0px' }, 250);
+          } else {
+            $slideAd.stop(true).animate({ 'right': '-360px' }, 250);
+          }
+      
+        });
+      
+      });
+    </script>
   </body>
 </html>

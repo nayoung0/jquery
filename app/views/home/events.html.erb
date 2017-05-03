@@ -16,7 +16,22 @@
         <li id="four">발사믹 식초</li>
       </ul>
     </div>
-    <script src="js/jquery-1.11.0.js"></script>
-    <script src="js/events.js"></script>
+    <script>
+      $(function() {
+        var ids = '';
+        var $listItems = $('li');
+      
+        $listItems.on('mouseover click', function() {
+          ids = this.id;
+          $listItems.children('span').remove();
+          $(this).append(' <span class="priority">' + ids + '</span>');
+        });
+      
+        $listItems.on('mouseout', function() {
+          $(this).children('span').remove();
+        });
+      
+      });
+    </script>
   </body>
 </html>
