@@ -15,4 +15,10 @@ class HomeController < ApplicationController
   def fade
     
   end
+  def click
+    
+  end
+  def click2
+    
+  end
 end
